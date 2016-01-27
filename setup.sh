@@ -16,12 +16,12 @@ echo "Changing to the $dotfiles directory"
 cd $dotfiles
 echo "...done"
 
-for $file in $files; do
+for file in $files; do
     echo "Moving $file to $dotfilesBackup"
     mv ~/.$file $dotfilesBackup/
     echo "...done"
 
-    echo "Creating symlink to $file
+    echo "Creating symlink to $file"
     ln -s $dotfiles/$file ~/.$file
     echo "...done"
 done
