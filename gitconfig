@@ -1,0 +1,8 @@
+[user]
+	name = Cade Colvin
+	email = cade.colvin@gmail.com
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+	ui = auto
