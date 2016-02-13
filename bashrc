@@ -10,7 +10,7 @@ alias python='python3'
 alias pip='pip3'
 
 # Set ls to be more robust
-alias ls='ls -lhFG'
+alias ls='ls -ohFG'
 
 # Use Tab-Completion the Windows way
 bind TAB:menu-complete
