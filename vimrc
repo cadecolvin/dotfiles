@@ -57,6 +57,7 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""
 "Determine which theme to use
 """""""""""""""""""""""""""""
+set background=dark
 colorscheme Solarized
 "colorscheme Zenburn
 
