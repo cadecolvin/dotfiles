@@ -14,14 +14,14 @@ call vundle#begin()
 " The Vundle Plugin
 Plugin 'gmarik/Vundle.vim'
 
-" The Powerline plugin
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
 
 " The Jedi-Vim Python completion tool
 Bundle 'DavidHalter/Jedi-Vim'
+
+" The Airline Plugin
+Plugin 'vim-airline/vim-airline'
 
 " The ZenBurn Theme
 Bundle 'JNurmine/Zenburn'
@@ -33,13 +33,17 @@ Bundle 'altercation/vim-colors-solarized'
 " ------------------------------------------
 call vundle#end()
 
-filetype plugin indent on
-syntax on
+"""""""""""""""""""""""""""""
+"Format Settings
+"""""""""""""""""""""""""""""
+set encoding=utf-8
 set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
+syntax on
+filetype plugin indent on
 
 """""""""""""""""""""""""""""
 "Key Mappings
@@ -53,13 +57,8 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""
 "Determine which theme to use
 """""""""""""""""""""""""""""
-if has('gui_running')
-    let g:solarized_termcolors=256
-    set background=dark
-    colorscheme solarized
-else
-    colorscheme Zenburn
-endif
+"colorshceme=Solarized
+colorscheme=Zenburn
 
 """""""""""""""""""""""""""""
 "Open new splits logically
@@ -68,15 +67,15 @@ set splitright
 set splitbelow
 
 """""""""""""""""""""""""""""
-"Powerline setup
+"Airline Settings
 """""""""""""""""""""""""""""
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 set laststatus=2
 
 """""""""""""""""""""""""""""
 "Jed-Vim Settings
 """""""""""""""""""""""""""""
 let g:jedi#force_py_version = 3
+let g:jedi#show_call_signatures = "2"
 
 """""""""""""""""""""""""""""
 "Python tabbing
@@ -89,8 +88,3 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
-
-"""""""""""""""""""""""""""""
-"Set the encoding
-"""""""""""""""""""""""""""""
-set encoding=utf-8
