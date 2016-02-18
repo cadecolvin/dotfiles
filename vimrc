@@ -57,8 +57,8 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""
 "Determine which theme to use
 """""""""""""""""""""""""""""
-"colorshceme=Solarized
-colorscheme=Zenburn
+colorscheme Solarized
+"colorscheme Zenburn
 
 """""""""""""""""""""""""""""
 "Open new splits logically
