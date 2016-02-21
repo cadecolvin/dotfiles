@@ -9,3 +9,7 @@ alias ls='ls -GF1'
 
 # Use Tab-Completion the Windows way
 bind TAB:menu-complete
+
+# Welcome the user
+Date=$(date)
+cowsay -f stegosaurus Welcome $USER. Happy Hacking! $Date
