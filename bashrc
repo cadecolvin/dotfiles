@@ -1,8 +1,3 @@
-# Setting PATH for Python 3.5
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-export PATH
-
 # Set python 3 as the default in terminal
 alias python='python3'
 
@@ -10,7 +5,7 @@ alias python='python3'
 alias pip='pip3'
 
 # Set ls to be more robust
-alias ls='ls -ohFG'
+alias ls='ls -GF1'
 
 # Use Tab-Completion the Windows way
 bind TAB:menu-complete
