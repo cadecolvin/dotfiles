@@ -5,9 +5,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
 " All Plugins Must exist after this line
 " -----------------------------------------
 
@@ -29,58 +26,55 @@ Bundle 'JNurmine/Zenburn'
 " The Solarized Theme
 Bundle 'altercation/vim-colors-solarized'
 
-" All Plugins must be added before this line
 " ------------------------------------------
+" All Plugins must be added before this line
 call vundle#end()
 
-"""""""""""""""""""""""""""""
-"Format Settings
-"""""""""""""""""""""""""""""
+" Use utf-8 character encoding
 set encoding=utf-8
+
+" Make the backspace normal
 set backspace=indent,eol,start
+
+" Set tabs to use 4 spaces
 set tabstop=4
+
+" Set the '>' and '<' commands to use 4 spaces
 set shiftwidth=4
+
+" Substitute spaces for tabs
 set expandtab
+
+" Turn on line numbering
 set number
+
+" Turn on syntax highlighting
 syntax on
 filetype plugin indent on
 
-"""""""""""""""""""""""""""""
-"Key Mappings
-"""""""""""""""""""""""""""""
 " Don't reach for escape
 imap jk <Esc>
 
 " Open NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
-"""""""""""""""""""""""""""""
-"Determine which theme to use
-"""""""""""""""""""""""""""""
+" Use the Solarized color scheme
 set background=dark
 colorscheme Solarized
 "colorscheme Zenburn
 
-"""""""""""""""""""""""""""""
-"Open new splits logically
-"""""""""""""""""""""""""""""
+" Open new splits logically
 set splitright
 set splitbelow
 
-"""""""""""""""""""""""""""""
-"Airline Settings
-"""""""""""""""""""""""""""""
+" Tell vim to always have a status line" 
 set laststatus=2
 
-"""""""""""""""""""""""""""""
-"Jed-Vim Settings
-"""""""""""""""""""""""""""""
+" Tell jedi-vim to use python3
 let g:jedi#force_py_version = 3
 let g:jedi#show_call_signatures = "2"
 
-"""""""""""""""""""""""""""""
-"Python tabbing
-"""""""""""""""""""""""""""""
+" Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -89,3 +83,5 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+    \ set colorcolumn=80 |
+    \ set encoding=utf-8
