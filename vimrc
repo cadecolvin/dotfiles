@@ -74,6 +74,13 @@ set laststatus=2
 let g:jedi#force_py_version = 3
 let g:jedi#show_call_signatures = "2"
 
+" Use code folding on indents
+set foldmethod=indent
+set foldlevel=99
+
+" Use spacebar to fold code
+nnoremap <space> za
+
 " Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
