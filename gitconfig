@@ -6,3 +6,8 @@
     diff = true
     status = true
 	ui = true
+[color "status"]
+	branch = cyan
+    added = blue
+    changed = yellow
+    untracked = red
