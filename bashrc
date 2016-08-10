@@ -16,7 +16,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Set ls to be more robust
-alias ls='ls -GF1 --color=auto'
+alias ls='ls -GF1'
 
 # Use Tab-Completion the Windows way
 bind TAB:menu-complete
