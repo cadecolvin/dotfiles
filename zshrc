@@ -99,5 +99,8 @@ alias egrep='fgrep --color=auto'
 # Run sudo whenever I forget to
 alias shit='sudo !!'
 
+# Easily connect to work SFTP
+alias sftpii='sftp cade.colvin@sftp.intelligentinsites.net'
+
 # Welcome the user with a fun picture
 cowsay -f stegosaurus "Welcome $USER. Happy Hacking!"
