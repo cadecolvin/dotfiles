@@ -96,5 +96,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='fgrep --color=auto'
 
+# Run sudo whenever I forget to
+alias shit='sudo !!'
+
 # Welcome the user with a fun picture
 cowsay -f stegosaurus "Welcome $USER. Happy Hacking!"

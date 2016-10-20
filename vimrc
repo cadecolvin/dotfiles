@@ -46,7 +46,7 @@ set shiftwidth=4
 set expandtab
 
 " Turn on line numbering
-set number
+set relativenumber
 
 " Turn on syntax highlighting
 syntax on
@@ -77,6 +77,12 @@ let g:jedi#show_call_signatures = "2"
 " Use code folding on indents
 set foldmethod=indent
 set foldlevel=99
+
+" Use Ctrl+Movement keys to change windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Use spacebar to fold code
 nnoremap <space> za
