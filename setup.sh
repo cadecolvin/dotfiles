@@ -6,7 +6,7 @@
 
 dotfiles=~/dotfiles
 dotfilesBackup=~/dotfiles_bak
-files="bashrc bash_profile gitconfig vimrc"
+files="bashrc bash_profile gitconfig vimrc zshrc"
 
 echo "Creating $dotfilesBackup directory to backup current dotfiles."
 mkdir -p $dotfilesBackup
