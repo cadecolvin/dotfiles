@@ -59,8 +59,8 @@ imap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 
 " Use the Solarized color scheme
-set background=dark
-colorscheme Solarized
+"set background=dark
+"colorscheme Solarized
 "colorscheme Zenburn
 
 " Open new splits logically
