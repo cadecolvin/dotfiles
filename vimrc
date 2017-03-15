@@ -1,3 +1,4 @@
+let mapleader=","
 set nocompatible
 filetype off
 
@@ -57,11 +58,10 @@ set smartcase
 set hlsearch
 set incsearch
 
-let mapleader=","
 
-map <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeToggle<CR>
 
-imap jk <Esc> 
+inoremap jk <Esc> 
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -69,6 +69,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <space> za
 nnoremap <leader><space> zM
+nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 syntax on
 filetype plugin indent on
