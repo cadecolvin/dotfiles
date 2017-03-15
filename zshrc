@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,7 +89,7 @@ alias python='python3'
 alias pip='pip3'
 
 # Make 'ls' more robust
-alias ls='ls -GF1'
+alias ls='ls -GF'
 
 # Make sure that grep is colored by default
 alias grep='grep --color=auto'
@@ -99,8 +99,5 @@ alias egrep='fgrep --color=auto'
 # Run sudo whenever I forget to
 alias shit='sudo !!'
 
-# Easily connect to work SFTP
-alias sftpii='sftp cade.colvin@sftp.intelligentinsites.net'
-
-# Welcome the user with a fun picture
+# Welcome myself with my favorite cowsay
 cowsay -f stegosaurus "Welcome $USER. Happy Hacking!"

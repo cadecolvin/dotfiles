@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " All Plugins Must exist after this line
+" Plugins can be installed by running :PluginInstall
 " -----------------------------------------
 
 " The Vundle Plugin
@@ -71,8 +72,8 @@ set splitbelow
 set laststatus=2
 
 " Tell jedi-vim to use python3
-let g:jedi#force_py_version = 3
-let g:jedi#show_call_signatures = "2"
+"let g:jedi#force_py_version = 3
+"let g:jedi#show_call_signatures = "2"
 
 " Use code folding on indents
 set foldmethod=indent
