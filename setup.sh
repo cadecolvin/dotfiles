@@ -4,8 +4,8 @@
 # Creates the symlinks from the home directory to the dotfiles directory
 ###############################################
 
-dotfiles=~/dotfiles
-dotfilesBackup=~/dotfiles_bak
+dotfiles=~/etc
+dotfilesBackup=~/etc/bak
 files="bashrc bash_profile gitconfig vimrc zshrc"
 
 echo "Creating $dotfilesBackup directory to backup current dotfiles."
