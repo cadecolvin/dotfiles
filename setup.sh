@@ -4,24 +4,19 @@
 # Creates the symlinks from the home directory to the dotfiles directory
 ###############################################
 
-dotfiles=~/etc
-dotfilesBackup=~/etc/bak
+backup=/bak
 files="bashrc bash_profile gitconfig vimrc zshrc"
 
-echo "Creating $dotfilesBackup directory to backup current dotfiles."
-mkdir -p $dotfilesBackup
-echo "...done"
-
-echo "Changing to the $dotfiles directory"
-cd $dotfiles
+echo "Creating $backup directory to backup current dotfiles."
+mkdir -p $backup
 echo "...done"
 
 for file in $files; do
-    echo "Moving $file to $dotfilesBackup"
-    mv ~/.$file $dotfilesBackup/
+    echo "Moving $file to $backup"
+    mv ~/.$file $backup/
     echo "...done"
 
     echo "Creating symlink to $file"
-    ln -s $dotfiles/$file ~/.$file
+    ln -s $file ~/.$file
     echo "...done"
 done

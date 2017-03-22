@@ -47,6 +47,7 @@ set copyindent
 set foldmethod=indent
 set foldlevel=99
 
+set number
 set relativenumber
 
 set splitright
@@ -95,3 +96,6 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix |
     \ set colorcolumn=80 |
     \ set encoding=utf-8
+
+" Setup new html files from the skeleton
+au BufNewFile *.html 0r ~/.vim/skeletons/skeleton.html
