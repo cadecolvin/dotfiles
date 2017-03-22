@@ -40,6 +40,7 @@ set shiftwidth=4
 set shiftround
 set expandtab
 set smarttab
+set nowrap
 
 set autoindent
 set copyindent
