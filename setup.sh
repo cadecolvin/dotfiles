@@ -7,7 +7,7 @@
 # Check for and install OhMyZsh
 if [ ! -d "~/.oh-my-zsh" ]; then
   echo -n "Installing Oh-My-Zsh..." 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh-master-tools-install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   echo "done"
 fi
 
