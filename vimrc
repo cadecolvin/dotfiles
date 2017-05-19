@@ -15,8 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
 
-" The Jedi-Vim Python completion tool
-Bundle 'DavidHalter/Jedi-Vim'
+Plugin 'othree/html5.vim'
 
 " The Airline Plugin
 Plugin 'vim-airline/vim-airline'
@@ -81,10 +80,6 @@ filetype plugin indent on
 "set background=dark
 "colorscheme Solarized
 "colorscheme Zenburn
-
-" Tell jedi-vim to use python3
-let g:jedi#force_py_version = 3
-let g:jedi#show_call_signatures = "2"
 
 " Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py

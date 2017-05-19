@@ -101,3 +101,5 @@ alias shit='sudo !!'
 
 # Welcome myself with my favorite cowsay
 cowsay -f stegosaurus "Welcome $USER. Happy Hacking!"
+
+export PATH="/usr/local/bin:$PATH"
