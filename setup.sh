@@ -23,7 +23,7 @@ fi
 
 dotfiles=$PWD
 backup=$dotfiles/bak
-files="bashrc bash_profile gitconfig Xmodmap Xresources vimrc zshrc"
+files="bashrc bash_profile gitconfig xinitrc Xmodmap Xresources vimrc zshrc"
 
 echo -n "Creating $backup directory for current dotfiles."
 mkdir -p $backup
