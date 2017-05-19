@@ -1,22 +1,40 @@
 #!/usr/bin/env bash
-###############################################
-# Creates the symlinks from the home directory to the dotfiles directory
-###############################################
 
-dotfiles=~/dotfiles
+# Author: Cade Colvin
+# Installs basic programs if needed
+# then deploys dotfiles
+
+# Check for and install OhMyZsh
+if [ ! -d "~/.oh-my-zsh" ]; then
+  echo -n "Installing Oh-My-Zsh..." 
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh-master-tools-install.sh)"
+  echo "done"
+fi
+
+# Check for and install Vundle and Vim plugins
+if [ ! -d "~/.vim/bundle" ]; then
+  echo -n "Installing Vundle..."
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  echo "done"
+  echo -n "Installing Vim Plugins..."
+  vim +PluginInstall +qall
+  echo "done"
+fi
+
+dotfiles=$PWD
 backup=$dotfiles/bak
-files="bashrc bash_profile gitconfig Xmodmap Xresources vimrc zshrc"
+files="bashrc bash_profile gitconfig XModmap Xresources vimrc zshrc"
 
-echo "Creating $backup directory to backup current dotfiles."
+echo -n "Creating $backup directory for current dotfiles."
 mkdir -p $backup
-echo "...done"
+echo "done"
 
 for file in $files; do
-    echo "Moving $file to $backup"
+    echo -n "Moving $file to $backup"
     mv ~/.$file $backup/
-    echo "...done"
+    echo "done"
 
-    echo "Creating symlink to $file"
+    echo -n "Creating symlink to $file"
     ln -fs $dotfiles/$file ~/.$file
-    echo "...done"
+    echo "done"
 done
