@@ -100,6 +100,6 @@ alias egrep='fgrep --color=auto'
 alias shit='sudo !!'
 
 # Welcome myself with my favorite cowsay
-cowsay -f stegosaurus "Welcome $USER. Happy Hacking!"
+cowsay -f stegosaurus $(fortune) 
 
 export PATH="/usr/local/bin:$PATH"
