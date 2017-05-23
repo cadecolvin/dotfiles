@@ -39,3 +39,7 @@ URxvt.font: xft:Inconsolata for Powerline:antialias=true:hinting=true:size=10
 *.color7:       #d6dbe5
 *.color15:      #ffffff
 
+! Man Pages
+*.colorIT:      #2a84d2
+*.colorBD:      #1081d6
+*.colorUL:      #d6dbe5
