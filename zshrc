@@ -86,10 +86,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Use Python 3 by default
 alias python='python3'
-alias pip='pip3'
 
 # Make 'ls' more robust
-alias ls='ls -GF'
+alias ls='ls -GF --color --group-directories-first'
 
 # Make sure that grep is colored by default
 alias grep='grep --color=auto'
