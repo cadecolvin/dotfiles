@@ -38,3 +38,9 @@ for file in $files; do
     ln -fs $dotfiles/$file ~/.$file
     echo "done"
 done
+
+# Setup i3 config files
+mkdir ~/.config/i3
+mkdir ~/.config/i3status
+ln -fs $dotfiles/i3config ~/.config/i3/config
+ln -fs $dotfiles/i3statusconfig ~/.config/i3status/config
