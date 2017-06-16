@@ -25,6 +25,14 @@ dotfiles=$PWD
 backup=$dotfiles/bak
 files="bashrc bash_profile gitconfig xinitrc Xmodmap Xresources vimrc zshrc"
 
+
+# Create a link to my custom oh-my-zsh theme
+echo -n "Creating symlink to oh-my-zsh theme..."
+mkdir -p ~/.oh-my-zsh/custom/themes
+ln -fs $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
+echo "done"
+
+# Symlink to all dotfiles in package
 echo -n "Creating $backup directory for current dotfiles."
 mkdir -p $backup
 echo "done"
