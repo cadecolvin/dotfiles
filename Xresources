@@ -1,5 +1,5 @@
 URxvt.scrollBar: false
-URxvt.font: xft:Inconsolata for Powerline:antialias=true:hinting=true:size=10
+URxvt.font: xft:Hack-Regular:antialias=true:hinting=true:size=10
 
 ! Color Scheme
 ! special
