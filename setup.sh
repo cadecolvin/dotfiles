@@ -4,6 +4,8 @@
 # Installs basic programs if needed
 # then deploys dotfiles
 
+dotfiles=$PWD
+backup=$dotfiles/bak
 
 # Install OhMyZsh
 echo "Installing Oh-My-Zsh..." 
@@ -13,16 +15,13 @@ exit | ( ./install_omz.sh > /dev/null )
 rm install_omz.sh
 echo "done!"
 
-# Copying in my custom oh-my-zsh theme
+# Symlink to my custom oh-my-zsh theme
 echo -n "Creating symlink to oh-my-zsh theme..."
 mkdir -p ~/.oh-my-zsh/custom/themes
-cp $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
+ln -fs $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
 echo "done!"
 
-
 # Symlink to all dotfiles in package
-dotfiles=$PWD
-backup=$dotfiles/bak
 files="bashrc bash_profile gitconfig xinitrc Xmodmap Xresources vimrc zprofile zshrc"
 
 echo -n "Creating $backup directory for current dotfiles."
