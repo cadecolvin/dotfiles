@@ -44,6 +44,7 @@ curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools
 chmod 755 install_omz.sh
 ( ./install_omz.sh > /dev/null )
 rm install_omz.sh
+exit
 echo "done"
 
 # Create a link to my custom oh-my-zsh theme
