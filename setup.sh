@@ -13,10 +13,10 @@ exit | ( ./install_omz.sh > /dev/null )
 rm install_omz.sh
 echo "done!"
 
-# Create a link to my custom oh-my-zsh theme
+# Copying in my custom oh-my-zsh theme
 echo -n "Creating symlink to oh-my-zsh theme..."
 mkdir -p ~/.oh-my-zsh/custom/themes
-ln -fs $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
+cp $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
 echo "done!"
 
 
