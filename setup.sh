@@ -30,12 +30,6 @@ mkdir -p ~/.config/i3status
 ln -fs $dotfiles/i3config ~/.config/i3/config
 ln -fs $dotfiles/i3statusconfig ~/.config/i3status/config
 
-# Create a link to my custom oh-my-zsh theme
-echo -n "Creating symlink to oh-my-zsh theme..."
-mkdir -p ~/.oh-my-zsh/custom/themes
-ln -fs $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
-echo "done"
-
 # Check for and install Vundle and Vim plugins
 echo -n "Installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null
@@ -51,3 +45,11 @@ chmod 755 install_omz.sh
 ( ./install_omz.sh > /dev/null )
 rm install_omz.sh
 echo "done"
+
+# Create a link to my custom oh-my-zsh theme
+echo -n "Creating symlink to oh-my-zsh theme..."
+mkdir -p ~/.oh-my-zsh/custom/themes
+ln -fs $dotfiles/cadecolvin.zsh-theme ~/.oh-my-zsh/custom/themes/cadecolvin.zsh-theme
+echo "done"
+
+echo "Log out and back in for changes to take affect"
