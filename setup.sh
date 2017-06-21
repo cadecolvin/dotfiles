@@ -15,9 +15,11 @@ mkdir -p $backup
 echo "done"
 
 for file in $files; do
-    echo -n "Moving $file to $backup"
-    mv ~/.$file $backup/
-    echo "done"
+    if [ -f $file ]; then
+        echo -n "Moving $file to $backup"
+        mv ~/.$file $backup/
+        echo "done"
+    fi
 
     echo -n "Creating symlink to $file"
     ln -fs $dotfiles/$file ~/.$file
@@ -42,9 +44,8 @@ echo "done"
 echo "Installing Oh-My-Zsh..." 
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o install_omz.sh
 chmod 755 install_omz.sh
-( ./install_omz.sh > /dev/null )
+exit | ( ./install_omz.sh > /dev/null )
 rm install_omz.sh
-exit
 echo "done"
 
 # Create a link to my custom oh-my-zsh theme
