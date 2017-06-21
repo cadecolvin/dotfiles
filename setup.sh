@@ -7,17 +7,20 @@
 # Check for and install OhMyZsh
 if [ ! -d "~/.oh-my-zsh" ]; then
   echo -n "Installing Oh-My-Zsh..." 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -o install_omz.sh
+  chmod 755 install_omz.sh
+  ./install_omz.sh > /dev/null
+  rm install_omz.sh
   echo "done"
 fi
 
 # Check for and install Vundle and Vim plugins
 if [ ! -d "~/.vim/bundle" ]; then
   echo -n "Installing Vundle..."
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null
   echo "done"
   echo -n "Installing Vim Plugins..."
-  vim +PluginInstall +qall
+  vim -c 'PluginInstall' -c 'qa!' > /dev/null
   echo "done"
 fi
 
@@ -48,7 +51,7 @@ for file in $files; do
 done
 
 # Setup i3 config files
-mkdir ~/.config/i3
-mkdir ~/.config/i3status
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status
 ln -fs $dotfiles/i3config ~/.config/i3/config
 ln -fs $dotfiles/i3statusconfig ~/.config/i3status/config
