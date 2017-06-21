@@ -23,7 +23,7 @@ echo "done!"
 # Symlink to all dotfiles in package
 dotfiles=$PWD
 backup=$dotfiles/bak
-files="bashrc bash_profile gitconfig xinitrc Xmodmap Xresources vimrc zshrc"
+files="bashrc bash_profile gitconfig xinitrc Xmodmap Xresources vimrc zprofile zshrc"
 
 echo -n "Creating $backup directory for current dotfiles."
 mkdir -p $backup
