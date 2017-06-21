@@ -24,6 +24,7 @@ for file in $files; do
     echo -n "Creating symlink to $file"
     ln -fs $dotfiles/$file ~/.$file
     echo "done"
+    read temp
 done
 
 # Setup i3 config files
