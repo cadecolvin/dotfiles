@@ -17,6 +17,7 @@ Bundle 'Scrooloose/NerdTree'
 
 " The Airline Plugin
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " The ZenBurn Theme
 Bundle 'JNurmine/Zenburn'
@@ -95,13 +96,16 @@ au BufNewFile,BufRead *.py
 au BufNewFile *.html 0r ~/.vim/skeletons/skeleton.html
 
 " Setup the Airline symbols
-let g:airline_symbols = {}
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "dark"
+
+"let g:airline_symbols = {}
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = ''
 
 
