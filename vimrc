@@ -15,8 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
 
-Plugin 'othree/html5.vim'
-
 " The Airline Plugin
 Plugin 'vim-airline/vim-airline'
 
@@ -95,3 +93,15 @@ au BufNewFile,BufRead *.py
 
 " Setup new html files from the skeleton
 au BufNewFile *.html 0r ~/.vim/skeletons/skeleton.html
+
+" Setup the Airline symbols
+let g:airline_symbols = {}
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+

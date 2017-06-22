@@ -1,5 +1,5 @@
 URxvt.scrollBar: false
-URxvt.font: xft:Hack-Regular:antialias=true:hinting=true:size=10
+URxvt.font: xft:Hack:antialias=true:hinting=true:size=8
 
 ! Color Scheme
 ! special

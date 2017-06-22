@@ -47,8 +47,12 @@ done
 # Setup i3 config files
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
-ln -fs $dotfiles/i3config ~/.config/i3/config
-ln -fs $dotfiles/i3statusconfig ~/.config/i3status/config
+ln -fs $dotfiles/i3.config ~/.config/i3/config
+ln -fs $dotfiles/i3status.config ~/.config/i3status/config
+
+# Setup terminator config
+mkdir -p ~/.config/terminator
+ln -fs $dotfiles/terminator.config ~/.config/terminator/config
 
 # Check for and install Vundle and Vim plugins
 if [ ! -d ~/.vim/bundle ]; then
