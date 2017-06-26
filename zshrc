@@ -96,7 +96,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='fgrep --color=auto'
 
 # Run sudo whenever I forget to
-alias shit='sudo !!'
+alias shit='sudo $(fc -ln -1)'
 
 # Welcome myself with my favorite cowsay
 cowsay -f stegosaurus $(fortune) 
