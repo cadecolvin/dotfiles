@@ -50,9 +50,9 @@ mkdir -p ~/.config/i3status
 ln -fs $dotfiles/i3.config ~/.config/i3/config
 ln -fs $dotfiles/i3status.config ~/.config/i3status/config
 
-# Setup terminator config
-mkdir -p ~/.config/terminator
-ln -fs $dotfiles/terminator.config ~/.config/terminator/config
+# Setup termite config
+mkdir -p ~/.config/termite
+ln -fs $dotfiles/termite.config ~/.config/termite/config
 
 # Check for and install Vundle and Vim plugins
 if [ ! -d ~/.vim/bundle ]; then
