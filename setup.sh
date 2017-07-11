@@ -54,6 +54,10 @@ ln -fs $dotfiles/i3status.config ~/.config/i3status/config
 mkdir -p ~/.config/termite
 ln -fs $dotfiles/termite.config ~/.config/termite/config
 
+# Setup rofi config
+mkdir -p ~/.config/rofi
+ln -fs $dotfiles/rofi.config ~/.config/rofi/config
+
 # Check for and install Vundle and Vim plugins
 if [ ! -d ~/.vim/bundle ]; then
     echo -n "Installing Vundle..."
