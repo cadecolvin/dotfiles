@@ -101,6 +101,9 @@ alias shit='sudo $(fc -ln -1)'
 # Make Nautilus run like Windows
 alias start='nautilus'
 
+# Make zle similar to my vimrc
+bindkey -M viins 'jk' vi-cmd-mode
+
 # Welcome myself with my favorite cowsay
 cowsay -f stegosaurus $(fortune) 
 
