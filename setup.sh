@@ -65,7 +65,7 @@ echo "done!"
 
 # Setup Xfce-4 keyboard shortcuts
 echo -n "Setting up xfce-4 shortcuts..."
-perchannel_path="~/.config/xfce4/xfconf/xfce-perchannel-xml"
+perchannel_path=~/.config/xfce4/xfconf/xfce-perchannel-xml
 mkdir -p $perchannel_path
 ln -fs $dotfiles/xfce4keyboardshortcuts.config $perchannel_path/xfce4-keyboard-shortcuts.xml
 echo "done!"
