@@ -44,23 +44,31 @@ for file in $files; do
 done
 
 # Setup i3 config files
+echo -n "Setting up i3 config..."
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/i3status
 ln -fs $dotfiles/i3.config ~/.config/i3/config
 ln -fs $dotfiles/i3status.config ~/.config/i3status/config
+echo "done!"
 
 # Setup termite config
+echo -n "Setting up Termite config..."
 mkdir -p ~/.config/termite
 ln -fs $dotfiles/termite.config ~/.config/termite/config
+echo "done!"
 
 # Setup rofi config
+echo -n "Setting up rofi config..."
 mkdir -p ~/.config/rofi
 ln -fs $dotfiles/rofi.config ~/.config/rofi/config
+echo "done!"
 
 # Setup Xfce-4 keyboard shortcuts
+echo -n "Setting up xfce-4 shortcuts..."
 perchannel_path="~/.config/xfce4/xfconf/xfce-perchannel-xml"
 mkdir -p $perchannel_path
 ln -fs $dotfiles/xfce4keyboardshortcuts.config $perchannel_path/xfce4-keyboard-shortcuts.xml
+echo "done!"
 
 # Check for and install Vundle and Vim plugins
 if [ ! -d ~/.vim/bundle ]; then
