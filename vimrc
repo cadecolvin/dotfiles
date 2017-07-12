@@ -30,29 +30,24 @@ Bundle 'altercation/vim-colors-solarized'
 call vundle#end()
 
 " Basic VIM settings
-set encoding=utf-8
-set backspace=indent,eol,start
+set encoding    =utf-8
+set backspace   =indent,eol,start
+set tabstop     =4
+set shiftwidth  =4
+set foldmethod  =indent
+set foldlevel   =99
+set laststatus  =2
 
-set tabstop=4
-set shiftwidth=4
 set shiftround
 set expandtab
 set smarttab
 set nowrap
-
 set autoindent
 set copyindent
-
-set foldmethod=indent
-set foldlevel=99
-
 set number
 set relativenumber
-
 set splitright
 set splitbelow
-set laststatus=2
-
 set showmatch
 set smartcase
 set hlsearch
@@ -61,7 +56,7 @@ set incsearch
 
 nmap <C-n> :NERDTreeToggle<CR>
 
-inoremap jk <Esc> 
+imap jk <Esc> 
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
