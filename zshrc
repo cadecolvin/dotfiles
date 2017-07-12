@@ -98,6 +98,9 @@ alias egrep='fgrep --color=auto'
 # Run sudo whenever I forget to
 alias shit='sudo $(fc -ln -1)'
 
+# Make Nautilus run like Windows
+alias start='nautilus'
+
 # Welcome myself with my favorite cowsay
 cowsay -f stegosaurus $(fortune) 
 
