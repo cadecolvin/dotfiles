@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Author: Cade Colvin
-# Installs basic programs if needed
-# then deploys dotfiles
+# Installs basic programs and configurations
 
 dotfiles=$PWD
 backup=$dotfiles/bak
@@ -57,6 +56,11 @@ ln -fs $dotfiles/termite.config ~/.config/termite/config
 # Setup rofi config
 mkdir -p ~/.config/rofi
 ln -fs $dotfiles/rofi.config ~/.config/rofi/config
+
+# Setup Xfce-4 keyboard shortcuts
+perchannel_path="~/.config/xfce4/xfconf/xfce-perchannel-xml"
+mkdir -p $perchannel_path
+ln -fs $dotfiles/xfce4keyboardshortcuts.config $perchannel_path/xfce4-keyboard-shortcuts.xml
 
 # Check for and install Vundle and Vim plugins
 if [ ! -d ~/.vim/bundle ]; then
