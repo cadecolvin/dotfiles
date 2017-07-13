@@ -56,7 +56,6 @@ set incsearch
 
 nmap <C-n> :NERDTreeToggle<CR>
 
-imap jk <Esc> 
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -65,6 +64,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <space> za
 nnoremap <leader><space> zM
 nnoremap <silent> <leader>/ :nohlsearch<CR>
+
+inoremap jk <Esc>
 
 syntax on
 filetype plugin indent on
