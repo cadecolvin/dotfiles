@@ -89,7 +89,7 @@ au BufNewFile,BufRead *.py
     \ set encoding=utf-8
 
 " Setup new html files from the skeleton
-au BufNewFile *.html 0r ~/.vim/skeletons/skeleton.html
+au BufNewFile,BufRead *.html set filetype=htmldjango
 
 " Setup the Airline symbols
 let g:airline_powerline_fonts = 1
