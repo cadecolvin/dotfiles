@@ -74,7 +74,7 @@ filetype plugin indent on
 " Use the Solarized color scheme
 "set background=dark
 "colorscheme Solarized
-"colorscheme Zenburn
+colors zenburn
 
 " Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py
