@@ -12,6 +12,9 @@ call vundle#begin()
 " The Vundle Plugin
 Plugin 'gmarik/Vundle.vim'
 
+" Rust Autocompletion
+Plugin 'racer-rust/vim-racer'
+
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
 
@@ -76,6 +79,10 @@ filetype plugin indent on
 "colorscheme Solarized
 colors zenburn
 
+" Follow Rust Best Practices
+au BufNewFile,BufRead *.rs
+    \ set hidden
+
 " Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -88,7 +95,7 @@ au BufNewFile,BufRead *.py
     \ set colorcolumn=80 |
     \ set encoding=utf-8
 
-" Setup new html files from the skeleton
+" Setup new html files
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
 " Setup the Airline symbols
