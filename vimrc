@@ -15,6 +15,9 @@ Plugin 'gmarik/Vundle.vim'
 " Rust Autocompletion
 Plugin 'racer-rust/vim-racer'
 
+" TOML Highlighting
+Plugin 'cespare/vim-toml'
+
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
 
