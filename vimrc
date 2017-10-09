@@ -61,6 +61,7 @@ set incsearch
 
 
 nmap <C-n> :NERDTreeToggle<CR>
+let NERDTreeMapActivateNode='<space>'
 
 
 nnoremap <C-h> <C-w>h
@@ -113,5 +114,3 @@ let g:airline_theme = "dark"
 "let g:airline_symbols.branch = ''
 "let g:airline_symbols.readonly = ''
 "let g:airline_symbols.linenr = ''
-
-
