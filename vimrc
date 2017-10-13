@@ -62,11 +62,7 @@ set smartcase
 set hlsearch
 set incsearch
 
-
-nmap <C-n> :NERDTreeToggle<CR>
-let NERDTreeMapActivateNode='<space>'
-
-
+" Mappings
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -76,12 +72,27 @@ nnoremap <leader><space> zM
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 inoremap jk <Esc>
+inoremap <leader>/ <C-x><C-o>
+
+" Don't autoselect first omnicomplete
+set completeopt=longest,menuone
+
+" Dynamically narrow results while typing. Enter to select 
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? "<C-n>" :
+            \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
 colors zenburn
+
+" NerdTree Settings
+nmap <C-n> :NERDTreeToggle<CR>
+let NERDTreeMapActivateNode='<space>'
 
 " Follow Rust Best Practices
 au BufNewFile,BufRead *.rs
     \ set hidden |
-    \ set foldmethod=syntax 
+    \ set foldmethod=syntax |
+    \ let g:racer_experimental_completer = 1
 
 " Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py
