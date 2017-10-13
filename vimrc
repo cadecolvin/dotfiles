@@ -13,14 +13,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Rust Autocompletion
-"Plugin 'rust-lang/rust.vim'
-"Plugin 'racer-rust/vim-racer'
+Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 
 " TOML Highlighting
 Plugin 'cespare/vim-toml'
-
-" YouCompleteMe AutoComplete
-Plugin 'Valloric/YouCompleteMe'
 
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
@@ -38,6 +35,8 @@ Bundle 'altercation/vim-colors-solarized'
 " ------------------------------------------
 " All Plugins must be added before this line
 call vundle#end()
+filetype plugin indent on
+syntax on
 
 " Basic VIM settings
 set encoding    =utf-8
@@ -77,14 +76,6 @@ nnoremap <leader><space> zM
 nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 inoremap jk <Esc>
-
-syntax on
-filetype plugin indent on
-
-
-" Use the Solarized color scheme
-"set background=dark
-"colorscheme Solarized
 colors zenburn
 
 " Follow Rust Best Practices
