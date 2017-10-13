@@ -13,10 +13,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Rust Autocompletion
-Plugin 'racer-rust/vim-racer'
+"Plugin 'rust-lang/rust.vim'
+"Plugin 'racer-rust/vim-racer'
 
 " TOML Highlighting
 Plugin 'cespare/vim-toml'
+
+" YouCompleteMe AutoComplete
+Plugin 'Valloric/YouCompleteMe'
 
 " The Nerdtree plugin
 Bundle 'Scrooloose/NerdTree'
@@ -85,7 +89,8 @@ colors zenburn
 
 " Follow Rust Best Practices
 au BufNewFile,BufRead *.rs
-    \ set hidden
+    \ set hidden |
+    \ set foldmethod=syntax 
 
 " Follow PEP-8 formatting for python files
 au BufNewFile,BufRead *.py
