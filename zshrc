@@ -46,7 +46,7 @@ bindkey -M viins 'jk' vi-cmd-mode # Make vi-mode plugin like my vimrc
 #####################################
 # Extras
 #####################################
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH:/home/ccolvin/.cargo/bin"
 export EDITOR=vim
 
 cowsay -f stegosaurus $(fortune) # Welcome myself
