@@ -61,6 +61,7 @@ set showmatch
 set smartcase
 set hlsearch
 set incsearch
+set cursorline
 
 " Mappings
 nnoremap <C-h> <C-w>h
