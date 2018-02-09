@@ -29,6 +29,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " The ZenBurn Theme
 Bundle 'JNurmine/Zenburn'
 
+" The Seoul256 Theme
+Plugin 'junegunn/seoul256.vim'
+
 " The Solarized Theme
 Bundle 'altercation/vim-colors-solarized'
 
@@ -83,7 +86,8 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? "<C-n>" :
             \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-colors zenburn
+let g:seoul256_background = 234
+colorscheme seoul256
 
 " NerdTree Settings
 nmap <C-n> :NERDTreeToggle<CR>
