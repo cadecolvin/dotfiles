@@ -1,25 +1,23 @@
-# Set python 3 as the default in terminal
-alias python='python3'
+#####################################
+# Colors
+#####################################
+DEFAULT=$PS1
+PS1="\[\033[1;30m\]\u:/\[\033[4;36m\]\W\[\033[00m\]\$ "
 
-# Use python 3 pip by default
-alias pip='pip3'
+#####################################
+# Aliases
+#####################################
+alias ls='ls -GF --color --group-directories-first' 
+alias grep='grep --color=auto'
+alias shit='sudo $(fc -ln -1)' # Fix my mistake when I forget sudo
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# Set ls to be more robust
-alias ls='ls -GF1'
-
-# Use Tab-Completion the Windows way
+set -o vi
+bind '"jk":vi-movement-mode'
 bind TAB:menu-complete
 
-# Welcome the user
-cowsay -f stegosaurus Welcome $USER. Happy Hacking!
+####################################
+# Extras
+#####################################
+export PATH="/usr/local/bin:$PATH:/home/ccolvin/.cargo/bin"
+export EDITOR=vim
+LS_COLORS="$LS_COLORS:ow=01;34"; export LS_COLORS
